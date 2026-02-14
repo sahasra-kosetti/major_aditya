@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ADITYA DEGREE COLLEGE FOR WOMENS – Bootcamp</title>
+
+<style>
+body{
+  margin:0;
+  background:#0b1220;
+  color:white;
+  font-family:Segoe UI, Arial;
+}
+header{
+  background:linear-gradient(90deg,#020b1a,#0b1d3a);
+  padding:20px;
+  text-align:center;
+}
+.logo{
+  width:80px;
+  margin-bottom:10px;
+}
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+}
+.stats div{
+  background:#14213d;
+  padding:15px 30px;
+  border-radius:12px;
+}
+h2{
+  text-align:center;
+  margin-top:30px;
+}
+#teams{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:15px;
+  padding:20px;
+}
+.card{
+  background:#1b263b;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  transition:.3s;
+}
+.card:hover{
+  background:#24345a;
+  transform:scale(1.03);
+}
+.team-detail{
+  max-width:900px;
+  margin:auto;
+  background:#1b263b;
+  padding:20px;
+  border-radius:12px;
+}
+.team-detail img{
+  width:100%;
+  border-radius:10px;
+}
+.gallery{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  padding:20px;
+}
+.gallery img{
+  width:300px;
+  border-radius:10px;
+}
+.ceo{
+  text-align:center;
+  padding:30px;
+}
+.ceo img{
+  width:200px;
+  border-radius:50%;
+}
+footer{
+  background:black;
+  text-align:center;
+  padding:15px;
+  margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <!-- LOGO -->
+  <svg class="logo" viewBox="0 0 300 300">
+    <circle cx="150" cy="150" r="140" fill="#1b263b"/>
+    <text x="150" y="140" text-anchor="middle" font-size="28" fill="white">ADITYA</text>
+    <text x="150" y="180" text-anchor="middle" font-size="14" fill="#00b4d8">
+      Degree College for Womens
+    </text>
+  </svg>
+
+  <h1>ADITYA DEGREE COLLEGE FOR WOMENS</h1>
+  <p>Data Analytics Using Python – Project Day Bootcamp</p>
+</header>
+
+<div class="stats">
+  <div>123 Members</div>
+  <div>20 Teams</div>
+  <div>3 Sections</div>
+</div>
+
+<h2>Teams</h2>
+<div id="teams"></div>
+
+<h2>Team 20 – The Boys</h2>
+<div class="team-detail">
+  <img src="https://i.imgur.com/HTz6QwH.jpg">
+  <p><b>Project:</b> Simple Loan Eligibility EDA</p>
+  <p>Explore loan datasets to find approval patterns using income and credit history.</p>
+  <ul>
+    <li>Gurajapu Vallabha</li>
+    <li>Vadagiri Praveen Jyothi Kumar</li>
+    <li>Narla Sudheer</li>
+    <li>Kondru Devesh Harsha Vardhan Karthik</li>
+    <li>Sri Ram</li>
+  </ul>
+</div>
+
+<h2>Bootcamp Highlights</h2>
+<div class="gallery">
+  <img src="https://i.imgur.com/fY1x0Vw.jpg">
+  <img src="https://i.imgur.com/W2F4v3U.jpg">
+</div>
+
+<h2>Message from the CEO</h2>
+<div class="ceo">
+  <img src="https://i.imgur.com/5qf6oGf.jpg">
+  <p>
+    This bootcamp was designed to bridge academic learning and real-world industry skills.  
+    Students from <b>ADITYA DEGREE COLLEGE FOR WOMENS</b> showed excellent teamwork and technical ability.
+  </p>
+  <p><b>– Devika Pranathi, CEO</b></p>
+</div>
+
+<footer>
+  Website Created by <b>Surendra</b> © 2026
+</footer>
+
+<script>
+const campusData = {
+  campus: "ADITYA DEGREE COLLEGE FOR WOMENS",
+  owner: "Surendra",
+  teams: [
+    "Himakar's Team","Data Dreamers","Developers","Logic Lancers",
+    "Legacy Avengers","Programmers","IT Solutions","Manoj Team",
+    "Robot Rebels","Rajeev's Team","Code Crafters","Lazy Bugs",
+    "Byte Squad","Innovation","Srinivasa Team","Tony Stark",
+    "Blacks","Phoenix","Pystorm","The Boys"
+  ]
+};
+
+const teamsDiv = document.getElementById("teams");
+
+campusData.teams.forEach((team,i)=>{
+  const div=document.createElement("div");
+  div.className="card";
+  div.innerHTML=`Team ${i+1}<br><b>${team}</b>`;
+  teamsDiv.appendChild(div);
+});
+</script>
+
+</body>
+</html>
